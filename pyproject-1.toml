@@ -1,15 +1,13 @@
 [project]
 name = "portraits"
 version = "0.1.0"
-description = "Analyse et recadrage automatique de portraits"
+description = "Détection et recadrage de portraits"
 requires-python = ">=3.10"
 dependencies = [
-    "tensorflow==2.15.0",
     "opencv-python==4.10.0.84",
     "mediapipe==0.10.14",
     "Pillow==10.3.0",
     "numpy==1.26.4",
-    "scikit-learn==1.5.2",
-    "python-dotenv==1.0.1"
+    "scikit-image==0.22.0",
+    "python-dotenv==1.0.1",
 ]
-

@@ -1,0 +1,13 @@
+[project]
+name = "portraits"
+version = "0.1.0"
+description = "Détection et recadrage de portraits"
+requires-python = ">=3.10"
+
+
+dependencies = [
+    "opencv-python",
+    "ultralytics",      # pour YOLOv8
+    "Pillow",
+    "numpy",
+]

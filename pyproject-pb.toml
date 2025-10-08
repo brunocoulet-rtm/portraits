@@ -1,0 +1,18 @@
+[project]
+name = "portraits"
+version = "0.1.0"
+description = "Scraping et traitement d'images de portraits"
+requires-python = ">=3.10"
+dependencies = [
+    "selenium==4.15.0",
+    "webdriver-manager==4.0.1",
+
+    "opencv-python==4.9.0.80",
+    "Pillow==10.2.0",
+    "numpy==1.26.4",
+    "face-recognition==1.3.0",
+    "dlib==19.24.1",
+    "scikit-image==0.22.0",
+    "imutils==0.5.4",
+    "python-dotenv==1.0.0",
+]

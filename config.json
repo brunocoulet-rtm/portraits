@@ -1,0 +1,7 @@
+{
+  "aspect_ratio": "4/3",
+  "sharpness_threshold": 120.0,
+  "brightness_min": 60,
+  "brightness_max": 220,
+  "face_confidence_min": 0.5
+}
