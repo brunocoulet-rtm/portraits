@@ -13,6 +13,34 @@ Ce projet utilise [uv](https://github.com/astral-sh/uv) pour la gestion des dép
 uv pip install -r requirements.txt
 ```
 
+## Fonctionnement
+Actuellement, le script fait cela :
+ 
+ouvre le dossier `input/img_raw` qui contient les photos au format 192x248
+essaie de pivoter et recadrer les photos si besoin (format 4/3)
+si l'opération précédente à réussi, il enregistre la photo dans le dossier `output/img_cropped`
+sinon il enregistre la photo dans le dossier `output/img_ko`
+ 
+Puis un autre script intervient :
+ouvre le dossier ``output/img_ko`` pour traiter les images qu'il contient
+essaie de corriger une éventuelle déformation, de pivoter, de recadrer
+s'il l'opération précédente à réussi, il enregistre la photo dans le dossier ``output/ko_processed``
+sinon la photo reste dans le dossier ``output/img_ko``
+ 
+ 
+En résumé :
+ 
+en entrée un dossier de photos 192x248 pixels
+en sortie 3 dossiers 
+img_cropped  ----- contient les photos considéré ok
+ko_processed ----- contient les photos considéré ok après rattrapage
+img_ko           ----- contient les photos considéré ko
+ 
+2 scripts sont lancés l'un après l'autre, on peut les rassembler en un seul script
+ 
+Un œil humain reste nécessaire en fin de parcours, mais le travail est prémâché
+
+
 ## Lancer les scripts
 
 ### 1. Pour exécuter `main.py` :
