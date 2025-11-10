@@ -1,0 +1,13 @@
+[project]
+name = "crop"
+version = "0.1.0"
+description = "Portrait cropping utility with face detection and orientation correction"
+readme = "README.md"
+requires-python = ">=3.12"
+
+dependencies = [
+    "opencv-contrib-python>=4.10.0",
+    "pillow>=10.0.0",
+    "numpy>=1.26.0",
+    "mediapipe>=0.10.21",
+]
